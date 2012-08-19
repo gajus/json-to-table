@@ -2,7 +2,7 @@
  * jQuery JSON-to-tables v0.0.1
  * https://github.com/anuary/jquery-json-to-table
  *
- * Licensed under the MIT.
+ * Licensed under the BSD.
  * https://github.com/anuary/jquery-json-to-table/blob/master/LICENSE
  *
  * Author: Gajus Kuizinas @anuary
