@@ -1,8 +1,8 @@
 # jQuery JSON-to-table plugin
 
-[jQuery JSON-to-table plugin](https://github.com/anuary/jquery-json-to-table/) ([demonstration](https://dev.anuary.com/1e405a1b-1f81-5050-87b1-57bf81b5e273/)) is a jQuery plugin that can represent hierarchical data (JSON) in HTML table.
+[jQuery JSON-to-table plugin](https://github.com/anuary/jquery-json-to-table/) ([demonstration](https://dev.anuary.com/1e405a1b-1f81-5050-87b1-57bf81b5e273/)) is a jQuery plugin that can represent a hierarchical data (JSON) in HTML table.
 
-The script is developed to handle all data types passable through JSON. At any time only one level of data is shown. The data tree can be navigated from node-to-node without refreshing the page.
+The script is designed to handle all data types passable through JSON without a need for a pre-defined template. At any time only one level of data is shown. The data tree can be navigated from node-to-node without refreshing the page. For your convenience, the script suggests (by assigning classes to the table rows) the value (in case of `boolean`) and the data type.
 
 ## Usage
 
