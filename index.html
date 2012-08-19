@@ -3,21 +3,47 @@
 <head>
 	<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
 	<script type="text/javascript" src="jquery.json-to-table.js"></script>
+	
+	<style>
+	html, body { margin: 0; font: 12px/20px monospace; }
+	
+	body { padding: 20px; }
+	
+	table { table-layout: fixed; border-collapse: collapse; width: 100%; }
+	thead { background: #b9c9fe; }
+	td,th { padding: 5px; }
+	tbody tr { border-top: 1px solid #fff; background: #e8edff; }
+	
+	th.name { width: 200px; }
+	
+	tr.navigation span,
+	span.back,
+	span.object { color: #00f; cursor: pointer; text-decoration: underline; }
+	
+	tr.navigation span { margin-right: 5px; }
+	
+	.authorship { margin-top: 20px; }
+	
+	a { color: #f00; text-decoration: underline; }
+	</style>
 </head>
 <body>
 	<script type="text/javascript">
 	$(function(){
-		$('table').ayJsonToTable(["a","b","c"])?>);
+		$('table').ayJsonToTable({"0":"foo","1":["a","b"],"2":null,"3":false,"4":true,"5":1,"tags":{"0":"foo","1":"bar","more":["foo",null,false,true,1]}});
 	});
 	</script>
 	<table>
 		<thead>
 			<tr>
-				<th>Name</th>
+				<th class="name">Name</th>
 				<th>Value</th>
 			</tr>
 		</thead>
 		<tbody></tbody>
 	</table>
+	<div class="authorship">
+		This is a demo of a <a href="https://github.com/anuary/jquery-json-to-table" target="_blank">jQuery plugin JSON-to-table</a>. This script has been developed by <a href="anuary.com/gajus" target="_blank">Gajus Kuizinas</a>.
+	</div>
 </body>
 </html>
