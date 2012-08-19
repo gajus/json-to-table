@@ -1,5 +1,5 @@
 /**
- * jQuery JSON-to-tables v0.0.1
+ * jQuery JSON-to-table v0.0.2
  * https://github.com/anuary/jquery-json-to-table
  *
  * Licensed under the BSD.
@@ -92,7 +92,7 @@
 					}
 					else if(typeof json[i] == 'object')
 					{
-						var value	= $('<span>').text('object').addClass('object').on('click', {reference: this, name: i}, function(e){
+						var value	= $('<span>').text('object (' + $(json[i]).length + ')').addClass('object').on('click', {reference: this, name: i}, function(e){
 							populate_data.call(e.data.reference, e.data.name);
 						});
 					}
