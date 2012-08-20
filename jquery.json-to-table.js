@@ -1,5 +1,5 @@
 /**
- * jQuery JSON-to-table v0.0.2
+ * jQuery JSON-to-table v0.0.1
  * https://github.com/anuary/jquery-json-to-table
  *
  * Licensed under the BSD.
@@ -23,7 +23,7 @@
 			{				
 				for(var i = 0, j = this.path.length; i < j; i++)
 				{
-					var json	= json[this.path[i]];
+					json	= json[this.path[i]];
 				}
 				
 				if(typeof name !== 'undefined')
@@ -33,7 +33,7 @@
 						throw 'Key does not exist.';
 					}
 					
-					var json	= json[name];
+					json	= json[name];
 					
 					this.path.push(name);
 				}
@@ -47,7 +47,7 @@
 				
 				for(var i = 0, j = name; i < j; i++)
 				{
-					var json	= json[this.path[i]];
+					json	= json[this.path[i]];
 				}
 				
 				this.path	= this.path.slice(0, name);
@@ -74,31 +74,33 @@
 			{
 				if(json.hasOwnProperty(i))
 				{
+					var value;
+				
 					if(typeof json[i] == 'string')
 					{
-						var value	= $('<span>').text($('<div />').text(json[i]).html());
+						value	= $('<span>').text($('<div />').text(json[i]).html());
 					}
 					else if(typeof json[i] == 'number')
 					{
-						var value	= $('<span>').text(json[i]);
+						value	= $('<span>').text(json[i]);
 					}					
 					else if(typeof json[i] === 'boolean')
 					{
-						var value	= $('<span>').text(json[i] ? 'true' : 'false').addClass(json[i] ? 'true' : 'false');
+						value	= $('<span>').text(json[i] ? 'true' : 'false').addClass(json[i] ? 'true' : 'false');
 					}
 					else if(json[i] === null)
 					{
-						var value	= $('<span>').text('null').addClass('null');
+						value	= $('<span>').text('null').addClass('null');
 					}
 					else if(typeof json[i] == 'object')
 					{
-						var value	= $('<span>').text('object (' + $(json[i]).length + ')').addClass('object').on('click', {reference: this, name: i}, function(e){
+						value	= $('<span>').text('object (' + $(json[i]).length + ')').addClass('object').on('click', {reference: this, name: i}, function(e){
 							populate_data.call(e.data.reference, e.data.name);
 						});
 					}
 					
 					var name	= $('<td></td>').text(i);
-					var value	= $('<td></td>').append(value);
+					value	= $('<td></td>').append(value);
 
 					$('<tr></tr>').addClass('data-type-' + (typeof json[i])).append(name, value).appendTo(tbody);
 				}
