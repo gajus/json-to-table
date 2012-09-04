@@ -5,7 +5,7 @@
  * Licensed under the BSD.
  * https://github.com/anuary/jquery-json-to-table/blob/master/LICENSE
  *
- * Author: Gajus Kuizinas @anuary
+ * Author: Gajus Kuizinas <g.kuizinas@anuary.com>
  */
 (function($){
 	$.fn.ayJsonToTable	= function(json)
