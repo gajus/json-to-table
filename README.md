@@ -7,23 +7,23 @@ The script is designed to handle all data types passable through JSON without a 
 ## Usage
 
 The table is not created by the script. The script only interacts with the `<tbody>`.
-
-	<script type="text/javascript">
+```html
+<script type="text/javascript">
 	$(function(){
 	    $('table').ayJsonToTable({"foo"});
 	});
-	</script>
+</script>
 
-	<table>
-	    <thead>
-	        <tr>
-	            <th class="name">Name</th>
-	            <th>Value</th>
-	        </tr>
-	    </thead>
-	    <tbody></tbody>
-	</table>
-
+<table>
+    <thead>
+        <tr>
+            <th class="name">Name</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+```
 ## Roadmap
 
 * Long strings collapsing with ability to expand the original string.
