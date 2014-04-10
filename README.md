@@ -8,10 +8,10 @@ The script is designed to handle all data types passable through JSON without a 
 
 The table is not created by the script. The script only interacts with the `<tbody>`.
 ```html
-<script type="text/javascript">
-	$(function(){
-	    $('table').ayJsonToTable({"foo"});
-	});
+<script>
+$(function(){
+    $('table').ayJsonToTable({"foo"});
+});
 </script>
 
 <table>
@@ -30,4 +30,4 @@ The table is not created by the script. The script only interacts with the `<tbo
 
 ## License & Notes
 
-The BSD License - Copyright (c) 2012 [Gajus Kuizinas](g.kuizinas@anuary.com).
+The BSD License - Copyright (c) 2014 [Gajus Kuizinas](g.kuizinas@anuary.com).
